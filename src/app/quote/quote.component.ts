@@ -11,7 +11,7 @@ export class QuoteComponent implements OnInit {
     {id:2,name:'Choose to be happy'},
     {id:3,name:'He who is not courageous to take risks will accomplish nothing in life'}  
   ];
-
+  
   constructor() { }
 
   ngOnInit(): void {
