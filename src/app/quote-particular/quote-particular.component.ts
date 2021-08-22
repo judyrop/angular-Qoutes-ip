@@ -9,7 +9,9 @@ export class QuoteParticularComponent implements OnInit {
 @Input() quote: Quote;
 @Output() isLike = new EventEmitter<boolean>();
 @Output() isDislike = new EventEmitter<boolean>();  
- 
+  quoteDelete(complete:boolean){
+//    this.isComplete.emit(complete);
+ }
 constructor() { }
 
   ngOnInit(): void {

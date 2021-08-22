@@ -1,7 +1,9 @@
-<p>Author:{{quote.author}}<br>
-   Username : {{quote.username}}
-   Date of Creation :{{quote.completeDate}}
+<p><i>Author</i>:{{quote.author}}<br>
+  <i>Username</i> : {{quote.username}}<br>
+ <i> Date of Creation</i> :{{quote.completeDate|date}}<br>
+This quote was created {{quote.completeDate|dateCount}} days.
 </p>
 <button class="btn btn-success like"> <i class="fa fa-thumbs-up"></i></button>
 <button class="btn btn-danger dislike"> <i class="fa fa-thumbs-down"></i> </button>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<button (click) ='quoteDelete(true)'>Delete Quote</button>
