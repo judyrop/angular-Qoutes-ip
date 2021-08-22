@@ -1,11 +1,12 @@
 
-<div>
+
     <h1>Quotes Page</h1>
-    <p>Welcome to your source for qoutations of any topic.</p>
+    <p>Welcome to your source for quotations of any topic.</p>
     <ul> 
-      <li *ngFor='let quote of quotes'>
-        {{quote.name}}
-        <app-quote-particular [quote] ='quote'></app-quote-particular>
-      </li>
+        <div *ngFor='let quote of quotes;let i =index'>
+      <li >{{quote.name}}</li>
+      <button (click)='toggleDetails(i)'>More...</button>
+        <app-quote-particular *ngIf='quote.showDescription' [quote] ='quote'></app-quote-particular>
+    </div>      
     </ul>
-  </div>
+  
