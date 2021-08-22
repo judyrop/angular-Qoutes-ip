@@ -7,12 +7,11 @@ import {Quote} from '../quote' ;
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[]=[
-    new Quote(1,'The way i see it,if you want the rainbow, you gotta put up with the rain','inspirational'),
-    new Quote(2,'Choose to be happy','terrible'),
-    new Quote(3,'He who is not courageous to take risks will accomplish nothing in life','Empowering')  
+    {id:1,name:'The way i see it,if you want the rainbow, you gotta put up with the rain'},
+    {id:2,name:'Choose to be happy'},
+    {id:3,name:'He who is not courageous to take risks will accomplish nothing in life'}  
   ];
-  toggleDetails(index:any){
-    this.quotes[index].showDescription = !this.quotes[index].showDescription;  }
+
   constructor() { }
 
   ngOnInit(): void {

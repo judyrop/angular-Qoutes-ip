@@ -5,8 +5,12 @@
     <ul> 
         <div *ngFor='let quote of quotes;let i =index'>
       <li >{{quote.name}}</li>
-      <button (click)='toggleDetails(i)'>More...</button>
-        <app-quote-particular *ngIf='quote.showDescription' [quote] ='quote'></app-quote-particular>
+      <button title="Up votes" ng-click="changeVote(vote,'up'"class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'up', false:''}[vote=='up'] ">Like</button>
+      <button title="Down votes" ng-click="changeVote(vote,'down'"class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'down', false:''}[vote=='down'] ">Dislike</button>
+    
+      <!-- <button (click)='likeClick'>Like</button>
+      <button (click)= 'dislikeClick'>Dislike</button> -->
+        <app-quote-particular [quote] ='quote'></app-quote-particular> 
     </div>      
     </ul>
   
