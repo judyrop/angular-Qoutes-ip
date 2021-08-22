@@ -4,7 +4,7 @@
     <p>Welcome to your source for quotations of any topic.</p>
     <ul> 
         <div *ngFor='let quote of quotes;let i =index'>
-      <li appStrikethrough>{{quote.name}}</li>
+      <li appStrikethrough>{{quote.name}}<br> Due on{{quote.completeDate|date}}</li>
       <button (click)='quoteDetails(i)'>More...</button>
       <!-- <button title="upVotes" ng-click="changeVote(vote,'up'"class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'up', false:''}[vote=='up'] ">Like</button>
       <button title="downVotes" ng-click="changeVote(vote,'down'"class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'down', false:''}[vote=='down'] ">Dislike</button> -->
@@ -12,7 +12,7 @@
       <!-- <button (click)='likeClick'>Like</button>
       <button (click)= 'dislikeClick'>Dislike</button> -->
         <app-quote-particular *ngIf='quote.showDetails' [quote] ='quote'>
-            
+
         </app-quote-particular> 
     </div>      
     </ul>
