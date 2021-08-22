@@ -2,8 +2,8 @@
  <h1><b>Quotes Page</b></h1>
  <hr>
  <div class="row">
-     <div class="col-md-6">
-    <p>Welcome to your source for quotations of any topic.</p>
+     <div class="col-md-6" ng-style="{color:cyan}">
+          <p>Welcome to your source for quotations of any topic.</p>
     <ul> 
         <div *ngFor='let quote of quotes;let i =index'>
       <li appStrikethrough>{{quote.name}}<br> Due on <b>{{quote.completeDate|date}}</b></li>
