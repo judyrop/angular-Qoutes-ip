@@ -1,0 +1,8 @@
+.border-1{
+    background-color: rgb(152, 201, 243);
+}
+.loop{
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}

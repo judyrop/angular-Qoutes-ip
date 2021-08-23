@@ -1,11 +1,11 @@
 <div class="container">
  <h1><b>Quotes Page</b></h1>
  <hr>
- <div class="row">
+ <div class="row border-1">
      <div class="col-md-6">
           <p>Welcome to your source for quotations of any topic.</p>
     <ul> 
-        <div *ngFor='let quote of quotes;let i =index'>
+        <div class="loop"  *ngFor='let quote of quotes;let i =index'>
       <li appStrikethrough>{{quote.name}}<br> Due on <b>{{quote.completeDate|date}}</b></li>
       <button (click)='quoteDetails(i)'>More...</button>
       <!-- <button title="upVotes" ng-click="changeVote(vote,'up'"class="fa fa-arrow-circle-up fa-2x" ng-class="{true:'up', false:''}[vote=='up'] ">Like</button>

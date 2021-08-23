@@ -1,9 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css"
+.submit{
+    color:black;
+}
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 body{
     font-family: 'Times New Roman', Times, serif;
