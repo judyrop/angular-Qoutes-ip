@@ -21,8 +21,7 @@ quoteDelete(complete:boolean){
    this.isComplete.emit(complete);
  }
 constructor() { }
-
-  ngOnInit(): void {
+ngOnInit(): void {
   }
 
 }
