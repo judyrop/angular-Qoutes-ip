@@ -2,7 +2,7 @@
  <h1><b>Quotes Page</b></h1>
  <hr>
  <div class="row">
-     <div class="col-md-6" ng-style="{color:cyan}">
+     <div class="col-md-6">
           <p>Welcome to your source for quotations of any topic.</p>
     <ul> 
         <div *ngFor='let quote of quotes;let i =index'>
@@ -14,14 +14,13 @@
       <!-- <button (click)='likeClick'>Like</button>
       <button (click)= 'dislikeClick'>Dislike</button> -->
      
-      <app-quote-particular *ngIf='quote.showDetails' [quote] ='quote' >
-                <!-- (isComplete)=deleteQuote($event,i) -->
+      <app-quote-particular *ngIf='quote.showDetails' [quote] ='quote'(isComplete)='deleteQuote($event,i)'>
         </app-quote-particular> 
     </div>      
     </ul>
 </div>
 <div class="col-md-6">
-    <app-quote-form></app-quote-form>
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 </div>
 </div>
 </div>

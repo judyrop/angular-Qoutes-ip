@@ -7,10 +7,18 @@ import {Quote} from '../quote';
 })
 export class QuoteParticularComponent implements OnInit {
 @Input() quote: Quote;
-@Output() isLike = new EventEmitter<boolean>();
-@Output() isDislike = new EventEmitter<boolean>();  
-  quoteDelete(complete:boolean){
-//    this.isComplete.emit(complete);
+@Output() isComplete = new EventEmitter<boolean>();
+// @Output() isLike = new EventEmitter<boolean>();
+// @Output() isDislike = new EventEmitter<boolean>();  
+votes:number=0;
+likes(){
+  this.votes++;
+}
+dislike(){
+  this.votes--;
+} 
+quoteDelete(complete:boolean){
+   this.isComplete.emit(complete);
  }
 constructor() { }
 

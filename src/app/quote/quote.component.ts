@@ -14,15 +14,20 @@ export class QuoteComponent implements OnInit {
   quoteDetails(index:any){
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
-  // deleteQuote(isComplete,index){
-  //   if(isComplete){
-  //     let toDelete =confirm('Are you sure you want to delete $ {this.quotes[index].name}?')
-  //     if(toDelete){
-  //       this.quotes.splice(index,1)
-  //     }
-  //   }
-  // }
-  
+   deleteQuote(isComplete:boolean,index:any){
+    if(isComplete){
+      let toDelete =confirm('Are you sure you want to delete $ {this.quotes[index].name}?')
+      if(toDelete){
+        this.quotes.splice(index,1)
+      }
+    }
+  }
+  addNewQuote(quote:any){
+    let quotelength =this.quotes.length;
+    quote.name = quotelength+1;
+    quote.completeDate = new Date(quote.complete)
+    this.quotes.push(quote)
+  }
   constructor() { }
 
   ngOnInit(): void {
